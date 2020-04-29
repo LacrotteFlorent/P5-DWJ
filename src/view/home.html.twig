@@ -1,0 +1,102 @@
+{% extends'template.html.twig' %}
+
+{% block head %}
+<!-- Titre -->
+<title>Accueil | VivonsLocal.fr</title>
+{% endblock head %}
+
+{% block body %}
+    <div class="container-fluid">
+        {% include "include_header.html" %}
+        
+        <section class="row homeImg">
+            <div class="col-12">
+                <h1>Vivons Local .fr</h1>
+                <p>Retrouver votre producteur en ligne</p>
+                <a href="/drive">Le drive</a>
+            </div>
+        </section>
+        <section class="row movingBackground">
+            
+        </section>
+        <section class="row showcase">
+            <div class="col-7">
+                <img src="/public/img/numero1.png" alt="Chiffre 1" />
+                <h3>Je m'inscrit, et effectue mes courses</h3>
+            </div>
+            <div class="col-5">
+                <img src="/public/img/numero2.png" alt="Chiffre 2" />
+                <h3>Je retire ma commande</h3>
+            </div class="col-4">
+            <div>
+                <h3>100%</h3>
+                <h3>Local</h3>
+            </div>
+            <div class="col-4">
+                <h3>Direct producteur</h3>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/presentationPhoto.jpg" alt="Photo de l'exploitation" />
+            </div>
+        </section>
+        <section class="row movingBackground">
+
+        </section>
+        <section class="row flagshipProducts">
+            <div class="productCard col-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Laitue</h4>
+                        <div class="productPrice">
+                        <p>1.20€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="/public/img/product1321.png" alt="Photo de laitue" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="category">
+                            <img src="/public/img/catVegetables.png" alt="Icones légumes" />
+                            <p>Légumes</p>
+                        </div>
+                        <div class="season">
+                        <img src="/public/img/season.png" alt="Icones saison" />
+                            <p>Toute l'année</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p>Laitue verte</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="productNumber">
+                            <li class="productNumber-item">
+                            <a class="productNumber-link" href="#" aria-label="less">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            </li>
+                            <li class="productNumber-item"><a class="productNumber-link" href="#">1</a></li>
+                            <li class="productNumber-item">
+                            <a class="productNumber-link" href="#" aria-label="more">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <form method="POST" class="align-middle">
+                            <button title="Ajouter au panier" type="submit" formaction="/addCart" name="product" value="{{billet.id}}" class="btn text-muted">Ajouter au panier</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include "include_footer.html" %}
+    </div>
+{% endblock body %}
