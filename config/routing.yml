@@ -1,0 +1,15 @@
+
+#ROUTING website VivonsLocal.fr
+
+accueil:
+    path: /
+    controller: Home
+    action: show
+accueil2:
+    path: /home
+    controller: Home
+    action: show
+contact:
+    path: /contact
+    controller: Contact
+    action: show
